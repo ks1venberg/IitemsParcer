@@ -4,3 +4,15 @@
 <form accept-charset="UTF-8" action="/imports" method="get">
 	<button type="button" onclick="alert('test')">Download</button>
 </form>
+
+<br/>
+<br/>
+
+<p>	Resources:</p>
+<% output = File.open "shops_list.txt", "r" %>
+	<ul>
+		<% while (line = output.gets) %>
+			<li><%= line %></li>
+		<% end %>
+	</ul>
+<% output.close %>
