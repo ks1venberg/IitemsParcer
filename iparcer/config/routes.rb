@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-root 'basic#index'
+	root 'basic#index'
 
-  get 'basic/index'
+	get 'basic/index'
 
-  get 'imports' => 'basic#imports'
+ 	get 'imports' => 'basic#imports'
 
+	get '/importbtn', to: 'basic#importbtn', as: 'importbtn'
 
 end
